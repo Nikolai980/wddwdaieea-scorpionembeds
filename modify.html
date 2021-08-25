@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Scorpion Bot интеграция за изпращане на embed webhook, лесно и бързо!!">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="https://i.imgur.com/6OoQ6hL.png">
+    <title>Scorpion Bot - WebHook Update</title>
+  </head>
+  <body style="font-family: Verdana">
+    <h1>Scorpion Bot - Embeds</h1>
+    <p>Тази страница разрешава да актуализирате/смените вашият запазен webhook</p><br>
+    <sub class="tip" onclick="tip()">къде е токена?</sub><br><br>
+    <input type="password" class="inpClass" id="token" placeholder="webhook token">
+    <input type="checkbox" onclick="reveal()" style="display: inline;">покажи моят webhook токен<br>
+    <input type="text" class="inpClass" id="channel" placeholder="ново канал id"><br>
+    <button id="update" onclick="updateHook()">update webhook</button>
+    <button onclick="window.open('/', '_self')" style="display: inline;">върни се в началото</button>
+    <script src="script2.js"></script>
+    <script>
+      if (location.protocol !== 'https:') {
+        location.replace(`https:${location.href.substring(location.protocol.length)}`);
+      }
+    </script>
+  </body>
+</html>

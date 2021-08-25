@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+msg vars used: weburl, webname, webav, webcontent, webbed
+embed vars used: emauth, emtitle, emdesc, emhex
+-->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Scorpion Bot интеграция за изпращане на embed webhook, лесно и бързо!!">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="https://i.imgur.com/6OoQ6hL.png">
+    <title>Scorpion Bot - WebHook Embeds</title>
+  </head>
+  <body style="font-family: Verdana">
+  <div id="main" class="main">
+    <h1>Scorpion Bot - Embeds</h1>
+    <p>С тази моя интеграция ще можете да пращате дискорд embeds чрез ваш webhook - също можете и със мойта команда +embed текст през дискорд да пращате.</p><br>
+    <input type="url" class="inpClass" id="url" placeholder="Webhook линк"><br>
+    <input type="text" class="inpClass" id="content" placeholder="Вашето съобщение"><br>
+    <input type="text" class="inpClass" id="name" placeholder="Име (по-желание)"><br>
+    <input type="url" class="inpClass" id="avatar" placeholder="Аватар Линк (по-желание)"><br>
+    <sub class="inpClass" id="tip">embed fields / опции</sub><br>
+    <input type="text" class="inpClass" id="emauth" placeholder="embed автор"><br>
+    <input type="url" class="inpClass" id="emtitle" placeholder="embed заглавие"><br>
+    <input type="text" class="inpClass" id="emdesc" placeholder="embed описание"><br>
+    <input type="url" class="inpClass" id="emhex" placeholder="embed hex color / цвят"><br>
+    <button onclick="sendMessage()">Изпрати</button><br>
+    <button onclick="extra()" id="extra">Покажи още опции</button>
+    <a href="/modify.html" draggable="false" style="text-decoration: none;"><button id="modify" style="display: inline;">Редактирай webhook</button></a><br>
+    <div id="store">
+    &nbsp;&nbsp;<button onclick="save()" id="save">Запази webhook url</button>
+    <button onclick="remove()" id="remove" style="display: inline;">Премахни webhook url</button>
+    </div>
+    <p id="error"></p>
+  </div>
+    <script src="script.js"></script>
+    <script>
+      if (location.protocol !== 'https:') {
+        location.replace(`https:${location.href.substring(location.protocol.length)}`);
+      }
+    </script>
+  </body>
+</html>

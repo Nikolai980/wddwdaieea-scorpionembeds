@@ -1,0 +1,72 @@
+.main {
+  opacity: 0;
+}
+
+body {
+  background: #e5e5e5;
+}
+
+#store {
+  background: lightslategray;
+  border-radius: 4px;
+  width: 210px;
+}
+
+.inpClass {
+  width: 225px;
+  height: 20px;
+  border-radius: 5px;
+  border-color: #ff0000;
+  background: lightblue;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+/* this will enable the animation */
+.inpClass {
+  transition: all 0.8s;
+  opacity: 1;
+}
+/* hide css */
+.inpClass.hide {
+  opacity: 0;
+  height: 0; /* optional */
+  visibility: hidden;
+}
+
+.inpClass:hover {
+  width: 235px;
+  transition: 0.2s;
+}
+
+.inpClass:focus {
+  width: 260px;
+  transition: 0.2s;
+}
+
+.inpClass:not(:focus), .inpClass:not(:hover) {
+  transition: 0.2s;
+}
+
+button {
+  width: 90px;
+  height: 40px;
+  border-radius: 5px;
+  border-color: #ff0000;
+  background: lightblue;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+#extra {
+  margin-top: 0px;
+}
+
+.tip {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* url, name, avatar, content */
